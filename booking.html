@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <!-- <html lang="en" dir="ltr"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <title>Booking</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="stylesheet/style.css">
-
+  <link rel="stylesheet" href="stylesheet/booking-style.css">
 </head>
 
 <body class="background">
-  <div class="topnav">
-    <b>SNOOZE.com</b>
-    <a href="#contact">CONTACT</a>
-    <a href="#reservations">RESERVATIONS</a>
-    <a href="#about">ABOUT</a>
-    <a class="active" href="#home">HOME</a>
-  </div>
-</body>
 
+  <header>
+    <div class="topnav">
+      <b>SNOOZE.com</b>
+      <a href="#contact">CONTACT</a>
+      <a href="#reservations">RESERVATIONS</a>
+      <a href="#about">ABOUT</a>
+      <a class="active" href="#home">HOME</a>
+    </div>
+  </header>
+  <!-- <div class="booking-section">
+  </div> -->
+
+  <!-- <div class="container">
+    <h5 class="section-head">
+      <span class="heading">Explore</span>
+      <span class="sub-heading">Our Beautiful Hotels</span>
+    </h5>
+  </div> -->
+  <main>
+    <section class="booking-area">
+      <div class="container">
+        <form action="" class="form">
+          <div class="input-group">
+            <label for="destination" class="input-label">Hotel</label>
+            <input type="text" class="input-b" id="destination"></input>
+          </div>
+          <div class="input-group">
+            <label for="checkin" class="input-label">Check In</label>
+            <input type="date" class="input" id="checkin"></input>
+          </div>
+          <div class="input-group">
+            <label for="checkout" class="input-label">Check Out</label>
+            <input type="date" class="input" id="checkout"></input>
+          </div>
+          <button class="btn form-btn btn-hov">Refine Search</button>
+        </form>
+      </div>
+    </section>
+    <section class="hotels">
+      <div class="container">
+        <div class="grid">
+          <div class="grid-item f-hotels">
+            <img src="hotel-images/resort1.jpg" class="hotel-img">
+            <!-- <img style="height: 300px; width: 400px;" src="hotel-images/resort1.jpg" class="hotel-image"> -->
+            <h5 class="hotel-name">Miami Resort 1</h5>
+            <span class="hotel-price">$200/Night</span>
+            <div class="hotel-rating">
+              <i class="fas fa-star rating"></i>
+              <i class="fas fa-star rating"></i>
+              <i class="fas fa-star rating"></i>
+              <i class="fas fa-star rating"></i>
+              <i class="fas fa-star-half rating"></i>
+            </div>
+            <a href="#" class="btn btn-gradient">Book Now
+              <!-- <span class="dots"><i class="fas fa-ellipsis-h"></i></span> -->
+            </a>
+          </div>
+          <div class="grid">
+            <div class="grid-item f-hotels">
+              <!-- <img style="height: 300px; width: 400px;" src="hotel-images/resort2.jpg" class="hotel-image"> -->
+              <img src="hotel-images/resort2.jpg" class="hotel-img">
+              <h5 class="hotel-name">Miami Resort 2</h5>
+              <span class="hotel-price">$250/Night</span>
+              <div class="hotel-rating">
+                <i class="fas fa-star rating"></i>
+                <i class="fas fa-star rating"></i>
+                <i class="fas fa-star rating"></i>
+                <i class="fas fa-star rating"></i>
+                <i class="fas fa-star-half rating"></i>
+              </div>
+              <a href="#" class="btn btn-gradient">Book Now
+                <!-- <span class="dots"><i class="fas fa-ellipsis-h"></i></span> -->
+              </a>
+            </div>
+            <div class="grid">
+              <div class="grid-item f-hotels">
+                <!-- <img style="height: 300px; width: 400px;" src="hotel-images/resort3.jpg" class="hotel-image"> -->
+                <img src="hotel-images/resort3.jpg" class="hotel-img">
+
+                <h5 class="hotel-name">Miami Resort 3</h5>
+                <span class="hotel-price">$300/Night</span>
+                <div class="hotel-rating">
+                  <i class="fas fa-star rating"></i>
+                  <i class="fas fa-star rating"></i>
+                  <i class="fas fa-star rating"></i>
+                  <i class="fas fa-star rating"></i>
+                  <i class="fas fa-star-half rating"></i>
+                </div>
+                <a href="#" class="btn btn-gradient">Book Now
+                  <!-- <span class="dots"><i class="fas fa-ellipsis-h"></i></span> -->
+                </a>
+              </div>
+            </div>
+          </div>
+    </section>
+  </main>
+
+</body>
 </html>
