@@ -6,14 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <title>Booking</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="stylesheet/style.css">
-  <link rel="stylesheet" href="stylesheet/booking-style.css">
+  <!-- <link rel="stylesheet" href="stylesheet/nav-v2.css"> -->
+  <link rel="stylesheet" href="stylesheet/booking.css">
+  <link rel="stylesheet" href="stylesheet/home.css">
+  <link rel="stylesheet" href="stylesheet/base.css">
+
+
 </head>
 
-<body class="background">
+<body>
+  <!-- This is the Navbar which will be on every page -->
 
-  <header>
+  <nav class="navbar navbar-expand-lg  navbar-dark navbar-inverse fixed-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="homePage.html">SNOOZE.com</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- All items in here will be in the collapse button -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reservations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- <header>
     <div class="topnav">
       <b>SNOOZE.com</b>
       <a href="#contact">CONTACT</a>
@@ -21,94 +54,87 @@
       <a href="#about">ABOUT</a>
       <a class="active" href="#home">HOME</a>
     </div>
-  </header>
-  <!-- <div class="booking-section">
-  </div> -->
+  </header> -->
+  <section class="booking-area">
+    <div class="container">
+      <form action="" class="form">
+        <div class="input-group">
+          <label for="destination" class="input-label">Hotel</label>
+          <input type="text" class="input-b" id="destination"></input>
+        </div>
+        <div class="input-group">
+          <label for="checkin" class="input-label">Check In</label>
+          <input type="date" class="input" id="checkin"></input>
+        </div>
+        <div class="input-group">
+          <label for="checkout" class="input-label">Check Out</label>
+          <input type="date" class="input" id="checkout"></input>
+        </div>
+        <button class="btn form-btn btn-hov">Refine Search</button>
+      </form>
+    </div>
+  </section>
 
-  <!-- <div class="container">
+<section class="rooms">
+  <div class="rooms-continer">
     <h5 class="section-head">
-      <span class="heading">Explore</span>
-      <span class="sub-heading">Our Beautiful Hotels</span>
+      <span class="heading">Explore Rooms</span>
     </h5>
-  </div> -->
-  <main>
-    <section class="booking-area">
-      <div class="container">
-        <form action="" class="form">
-          <div class="input-group">
-            <label for="destination" class="input-label">Hotel</label>
-            <input type="text" class="input-b" id="destination"></input>
-          </div>
-          <div class="input-group">
-            <label for="checkin" class="input-label">Check In</label>
-            <input type="date" class="input" id="checkin"></input>
-          </div>
-          <div class="input-group">
-            <label for="checkout" class="input-label">Check Out</label>
-            <input type="date" class="input" id="checkout"></input>
-          </div>
-          <button class="btn form-btn btn-hov">Refine Search</button>
-        </form>
+    <div class="grid rooms-grid">
+      <div class="grid-item featured-rooms">
+        <div class="image-wrap">
+          <img class="room-image" src="hotel-images/room_1.jpg">
+          <h5 class="room-name">Aria Suite</h5>
+        </div>
+        <div class="room-info-wrap">
+          <span class="room-price">$160 <span class="per-night">/ night</span></span>
+          <p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+          <a href="#" class="btn rooms-btn">Book Now &rarr;</a>
+        </div>
       </div>
-    </section>
-    <section class="hotels">
-      <div class="container">
-        <div class="grid">
-          <div class="grid-item f-hotels">
-            <img src="hotel-images/resort1.jpg" class="hotel-img">
-            <!-- <img style="height: 300px; width: 400px;" src="hotel-images/resort1.jpg" class="hotel-image"> -->
-            <h5 class="hotel-name">Miami Resort 1</h5>
-            <span class="hotel-price">$200/Night</span>
-            <div class="hotel-rating">
-              <i class="fas fa-star rating"></i>
-              <i class="fas fa-star rating"></i>
-              <i class="fas fa-star rating"></i>
-              <i class="fas fa-star rating"></i>
-              <i class="fas fa-star-half rating"></i>
-            </div>
-            <a href="#" class="btn btn-gradient">Book Now
-              <!-- <span class="dots"><i class="fas fa-ellipsis-h"></i></span> -->
-            </a>
-          </div>
-          <div class="grid">
-            <div class="grid-item f-hotels">
-              <!-- <img style="height: 300px; width: 400px;" src="hotel-images/resort2.jpg" class="hotel-image"> -->
-              <img src="hotel-images/resort2.jpg" class="hotel-img">
-              <h5 class="hotel-name">Miami Resort 2</h5>
-              <span class="hotel-price">$250/Night</span>
-              <div class="hotel-rating">
-                <i class="fas fa-star rating"></i>
-                <i class="fas fa-star rating"></i>
-                <i class="fas fa-star rating"></i>
-                <i class="fas fa-star rating"></i>
-                <i class="fas fa-star-half rating"></i>
-              </div>
-              <a href="#" class="btn btn-gradient">Book Now
-                <!-- <span class="dots"><i class="fas fa-ellipsis-h"></i></span> -->
-              </a>
-            </div>
-            <div class="grid">
-              <div class="grid-item f-hotels">
-                <!-- <img style="height: 300px; width: 400px;" src="hotel-images/resort3.jpg" class="hotel-image"> -->
-                <img src="hotel-images/resort3.jpg" class="hotel-img">
+      <div class="grid-item featured-rooms">
+        <div class="image-wrap">
+          <img class="room-image" src="hotel-images/room_3.jpg">
+          <h5 class="room-name">Juniper Suite</h5>
+        </div>
+        <div class="room-info-wrap">
+          <span class="room-price">$400 <span class="per-night">/ night</span></span>
+          <p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+          <a href="#" class="btn rooms-btn">Book Now &rarr;</a>
+        </div>
+      </div>
+      <div class="grid-item featured-rooms">
+        <div class="image-wrap">
+          <img class="room-image" src="hotel-images/room_5.jpg">
+          <h5 class="room-name">Cosmo Suite</h5>
+        </div>
+        <div class="room-info-wrap">
+          <span class="room-price">$300 <span class="per-night">/ night</span></span>
+          <p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+          <a href="#" class="btn rooms-btn">Book Now &rarr;</a>
+        </div>
+      </div>
+      <div class="grid-item featured-rooms">
+        <div class="image-wrap">
+          <img class="room-image" src="hotel-images/room_2.jpg">
+          <h5 class="room-name">Brix Suite</h5>
+        </div>
+        <div class="room-info-wrap">
+          <span class="room-price">$190 <span class="per-night">/night</span></span>
+          <p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+          <a href="#" class="btn rooms-btn">Book Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <h5 class="hotel-name">Miami Resort 3</h5>
-                <span class="hotel-price">$300/Night</span>
-                <div class="hotel-rating">
-                  <i class="fas fa-star rating"></i>
-                  <i class="fas fa-star rating"></i>
-                  <i class="fas fa-star rating"></i>
-                  <i class="fas fa-star rating"></i>
-                  <i class="fas fa-star-half rating"></i>
-                </div>
-                <a href="#" class="btn btn-gradient">Book Now
-                  <!-- <span class="dots"><i class="fas fa-ellipsis-h"></i></span> -->
-                </a>
-              </div>
-            </div>
-          </div>
-    </section>
-  </main>
+
+  <!-- These scripts are required on every page -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
