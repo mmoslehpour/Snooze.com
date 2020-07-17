@@ -49,6 +49,7 @@ ul{
   background-color: #a8bdd1;
   z-index: -1;
 } */
+
 section.booking-area {
   margin-top: 80px;
   margin-bottom: 0;
@@ -242,7 +243,10 @@ button.btn-hov:hover {
   flex-direction: column;
   align-items: center;
 }
-
+li{
+  color: #270A8A;
+  font-size: 16px;
+}
 .paragraph{
   color: #a5a5a5;
   margin-bottom: 3px;
@@ -292,7 +296,7 @@ button.btn-hov:hover {
   font-weight: bold;
 }
 .rooms-btn{
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
   color: black
   padding: 0;
