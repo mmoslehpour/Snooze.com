@@ -21,7 +21,6 @@
   background-image: linear-gradient(to right, #28468a , #207dac);
 }
 
-
 /* body{
   font-family: 'Open Sans' , sans-serif;
   font-size: 9px;
@@ -60,7 +59,7 @@ section.booking-area {
   margin-left: 10px;
   margin-right: 10px;
   display: inline-block;
-  width: 26%;
+  width: 22%;
 }
 .input-label {
   display: block;
@@ -69,18 +68,18 @@ section.booking-area {
   color: white;
   margin-bottom: 2px;
 }
-.input,
-.options {
-  outline: none;
-  border: none;
-  width: 100%;
-  /* min-height: 20px; */
-  padding: 8px;
-  font-weight: bold;
-  color: #a5a5a5;
-  letter-spacing: 2px;
+.input-label-b {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 2px;
 }
-.input-b,
+.input-group-b{
+  display: inline-block;
+  width: 7%;
+  margin-right: 10px;
+}
 .options {
   outline: none;
   border: none;
@@ -91,6 +90,27 @@ section.booking-area {
   color: #a5a5a5;
   letter-spacing: 2px;
 }
+.input{
+  outline: none;
+  border: none;
+  width: 100%;
+  /* min-height: 20px; */
+  padding: 8px;
+  font-weight: bold;
+  color: #a5a5a5;
+  letter-spacing: 2px;
+}
+.input-b {
+  outline: none;
+  border: none;
+  width: 100%;
+  /* min-height: 20px; */
+  padding: 10px;
+  font-weight: bold;
+  color: #a5a5a5;
+  letter-spacing: 2px;
+}
+
 
 button.btn {
   background-color: #5eb04a;
@@ -98,7 +118,7 @@ button.btn {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 10px 30px;
   display: inline-flex;
   align-items: center;
   border: none;
