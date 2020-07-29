@@ -45,13 +45,11 @@
     </div>
   </nav>
 
-
   <section class="reserve-area-two">
     <div class="section-top">
       <span class="heading-top">Comfirmation Details</span>
     </div>
     <body>
-
       <?php
       if(isset($_POST['submit'])){
         $name = $_POST['name'];
