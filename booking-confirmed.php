@@ -48,7 +48,7 @@
 
   <section class="reserve-area-two">
     <div class="section-top">
-      <span class="heading-top">Congratulations, your trip has been confirmed!</span>
+      <span class="heading-top">Comfirmation Details</span>
     </div>
     <body>
 
@@ -61,10 +61,10 @@
         $comfirmationNum = substr(str_shuffle($numGenerator), 0, 8);
         $receiver=$_POST['email']; // Receiver Email
         $subject='Snooze Hotel Booking Comfirmation';
-        $message="Thank you for booking with Snooze.com, here is your reservation details: "."\n"."Name: ".$name."\n"."Phone: ".$phone."\n"."Comfirmation Number: ".$comfirmationNum;
+        $message="Congratulations, your trip has been confirmed! "."\n"."Thank you for booking with Snooze.com, here is your reservation details: "."\n"."Name: ".$name."\n"."Phone: ".$phone."\n"."Comfirmation Number: ".$comfirmationNum;
         $headers="From: ".$sender;
 
-        if(mail($receiver, $subject, $message, $header)){
+        if(mail($receiver, $subject, $message, $headers)){
           //header("Location: booking-confirmed.php");
           echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
           echo "<h4>Name: "." ".$name."<br><br></h4>";
