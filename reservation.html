@@ -45,6 +45,7 @@
     </div>
   </nav>
 
+
   <section class="reserve-area">
     <div class="section-top">
       <span class="heading-top">Book your trip.</span>
@@ -55,32 +56,86 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Room(s): <span>XXXX</span>
     </h3>
     <h4>Please fill out the following information to complete your booking reservation.</h4>
-    <form class="inside" action="booking-confirmed.html">
+     <form action="booking-confirmed.php" method="post" name="form" class="form-box">
       <div class="form-group">
-        <label for="exampleInputEmail1">Full Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter first and last name">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com">
-        <label for="exampleInputEmail1">Phone Number</label>
-        <input type="text" class="form-control" id="phsone" aria-describedby="emailHelp" placeholder="Enter a 9 digit phone number including area code">
-        <label for="exampleInputEmail1">Date of Birth</label>
-        <input type="date" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Enter DOB: 01/01/1990">
+        <label for="name">Name</label>
+        <br />
+        <input type="text" name="name" class="form-control" placeholder="Joe Smith" pattern="[A-Z\sa-z]{3,20}" required />
+        <br />
+        <label for="email">Email</label>
+        <br />
+        <input type="email" name="email" class="form-control" placeholder="jsmith@email.com" required />
+        <br />
+        <label for="phone">Phone</label>
+        <br />
+        <input type="tel" name="phone" class="form-control" placeholder="(123)456-7890" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required />
+        <br />
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Enter DOB: 01/01/1990" required>
         <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="gridCheck1">
-          <label class="form-check-label" for="gridCheck1">
+          <label class="form-check-label" for="gridCheck1" required>
             By checking this box, you are agreeing with Snooze.com terms of services.
           </label>
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" href="booking-confirmed.html" class="btn btn-primary btn-right">Book Now</button>
+            <input type="submit" name="submit" value="BOOK NOW" class="sub-btn"/>
+
           </div>
         </div>
       </div>
     </form>
     <a href="booking.html"><h6 class="low">Modify your search</h6></a>
   </section>
+
+  <!-- style for form -->
+<style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: helvetica;
+    }
+    .form-box {
+        padding: 15px;
+    }
+    label {
+        font-size: 18px;
+    }
+
+    .sub-btn {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+        border: none;
+        background: linear-gradient(#000033, #00001a);
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px #444;
+    }
+    .sub-btn:hover {
+        background: linear-gradient(#800000, #dc143c);
+        opacity: 0.8;
+        transition: all ease-out 0.2s;
+    }
+    .sub-btn:focus {
+        outline: none;
+    }
+    @media (max-width: 720px) {
+        .main {
+            width: 90%;
+        }
+    }
+</style>
+<!-- These scripts are required on every page -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 </body>
 
