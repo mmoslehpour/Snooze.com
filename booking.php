@@ -49,7 +49,6 @@
     </nav>
     <!-- End of Navbar -->
 
-
   <!-- <header>
     <div class="topnav">
       <b>SNOOZE.com</b>
@@ -89,6 +88,8 @@
     </div>
   </section>
 
+
+<?php if($_POST['state'] == 'California'){ ?>
 <section class="rooms">
   <div class="rooms-continer">
     <h5 class="section-head">
@@ -171,6 +172,187 @@
     </div>
   </div>
 </section>
+<?php } ?>
+
+
+<?php
+if($_POST['state'] == 'Washington'){?>
+  <section class="rooms">
+    <div class="rooms-continer">
+      <h5 class="section-head">
+        <span class="heading">Explore Hotels in Washington</span>
+      </h5>
+      <div class="grid rooms-grid">
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/WA-Conde.jpg">
+            <h5 class="room-name">Conde Suites - Seattle</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$220 <span class="per-night">/ night</span></span>
+            <p class="paragraph">Experience the Magnificent view of Downtown Seattle. Over 7 Resturants in this Hotel and an amazing pool and spa.</p>
+            <li>WiFi</li>
+            <li>Continental Breakfast</li>
+            <li>Free Cancellation
+
+                  <input type="hidden" name="condeWA" value="Conde Suites - Seattle">
+                <input class="btn rooms-btn" type="submit" name="conde" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+            </li>
+          </div>
+        </div>
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/WA-HotelMax.jpg">
+            <h5 class="room-name">Hotel Max - Downtown Seattle</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$234 <span class="per-night">/ night</span></span>
+            <p class="paragraph">Walking disntance from Seattled Space Needle. And a luxurious Hotel to stay in.</p>
+            <li>WiFi</li>
+            <li>Brunch Saturdays</li>
+            <li>Free Cancellation
+
+                  <input type="hidden" name="maxWA" value="Hotel Max - Seattle">
+                  <input class="btn rooms-btn" type="submit" name="max" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+            </li>
+          </div>
+        </div>
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/WA-PanPacific.jpg">
+            <h5 class="room-name">Pan Pacific - Washington</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$410 <span class="per-night">/ night</span></span>
+            <p class="paragraph">Get a 360 view of the city and the harbor in Downtown Seattle. All Inclusive luxurious stay.</p>
+          <li>WiFi</li>
+          <li>All Inclusive</li>
+          <li>Free Cancellation
+
+                  <input type="hidden" name="panPacific" value="Pan Pacific - Washington">
+                  <input class="btn rooms-btn" type="submit" name="pan" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+          </li>
+          </div>
+        </div>
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/WA-Roosevelt.jpg">
+            <h5 class="room-name">Roosevelt - Seattle</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$189 <span class="per-night">/night</span></span>
+            <p class="paragraph">Whether if your new stay is for business or pleasure. The luxurious Roosevelt in Downtown Seattle will make you feeling like a celeberty</p>
+            <li>WiFi</li>
+            <li>All Inclusive</li>
+            <li>Free Cancellation
+
+                <input type="hidden" name="rooseveltWA" value="Roosevelt - Seattle">
+                <input class="btn rooms-btn" type="submit" name="roosevelt" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+            </li>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<?php } ?>
+
+<?php
+if($_POST['state'] == 'Las Vegas'){?>
+  <section class="rooms">
+    <div class="rooms-continer">
+      <h5 class="section-head">
+        <span class="heading">Explore Hotels in Las Vegas, Nevada</span>
+      </h5>
+      <div class="grid rooms-grid">
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/LS-Aria.jpg">
+            <h5 class="room-name">Aria - Las Vegas Strip</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$200 <span class="per-night">/ night</span></span>
+            <p class="paragraph">Stay in one of Las Vegas' newest hotels and casino. Enjoy a nice view of the Ballagio fountains.</p>
+            <li>WiFi</li>
+            <li>Resort, Pool & Spa</li>
+            <li>Free Cancellation
+
+                  <input type="hidden" name="ariaLS" value="Aria - Las Vegas">
+                <input class="btn rooms-btn" type="submit" name="aria" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+            </li>
+          </div>
+        </div>
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/LS-ballagio.jpg">
+            <h5 class="room-name">Bellagio - Las Vegas</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$312 <span class="per-night">/ night</span></span>
+            <p class="paragraph">Enjoy a luxurious stay at the Ballagio at the heart of Las Vegas Strip. Enjoy a nice view of the Bellagio fountains.</p>
+            <li>WiFi</li>
+            <li>Resort, Pool, & Spa</li>
+            <li>Cancel within 24 hrs
+
+                  <input type="hidden" name="bellagioLs" value="Bellagio - Las Vegas">
+                  <input class="btn rooms-btn" type="submit" name="bellagio" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+            </li>
+          </div>
+        </div>
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/LS-Caesers.jpg">
+            <h5 class="room-name">Caesars Palace - Las Vegas</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$220 <span class="per-night">/ night</span></span>
+            <p class="paragraph">One of Vegas' top resorts and pools. Enjoy the night life at the Omnia Night Club.</p>
+          <li>WiFi</li>
+          <li>Omnia Night Club.</li>
+          <li>Resort, Pool, & Spa
+
+                  <input type="hidden" name="caesarsLS" value="Caesars Palace - Las Vegas">
+                  <input class="btn rooms-btn" type="submit" name="caesars" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+          </li>
+          </div>
+        </div>
+        <div class="grid-item featured-rooms">
+          <div class="image-wrap">
+            <img class="room-image" src="hotel-images/LS-Cosmo.jpg">
+            <h5 class="room-name">Cosmopolitan - Las Vegas Strip</h5>
+          </div>
+          <div class="room-info-wrap">
+            <span class="room-price">$312 <span class="per-night">/night</span></span>
+            <p class="paragraph">Best fountain view. Balcony and state of the art architecture.</p>
+            <li>WiFi</li>
+            <li>Resort, Pool, & Spa</li>
+            <li>Cancel within 24 hrs
+
+                <input type="hidden" name="cosmoLS" value="Cosmopolitan - Las Vegas">
+                <input class="btn rooms-btn" type="submit" name="cosmo" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+            </li>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<?php } ?>
+
+
+
 
 
   <!-- These scripts are required on every page -->
