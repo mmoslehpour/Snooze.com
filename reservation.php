@@ -75,6 +75,38 @@
           echo "W - Holly Wood";
           echo "<input type='hidden' name='hotel' value='".$_POST['wHotel']."'>";
         }
+        else if(isset($_POST['conde'])){
+          echo "Conde Suites - Seattle";
+          echo "<input type='hidden' name='hotel' value='".$_POST['condeWA']."'>";
+        }
+        else if(isset($_POST['max'])){
+          echo "Hotel Max - Downtown Seattle";
+          echo "<input type='hidden' name='hotel' value='".$_POST['maxWA']."'>";
+        }
+        else if(isset($_POST['pan'])){
+          echo "Pan Pacific - Washington";
+          echo "<input type='hidden' name='hotel' value='".$_POST['panPacific']."'>";
+        }
+        else if(isset($_POST['roosevelt'])){
+          echo "Roosevelt - Seattle";
+          echo "<input type='hidden' name='hotel' value='".$_POST['rooseveltWA']."'>";
+        }
+        else if(isset($_POST['aria'])){
+          echo "Aria - Las Vegas";
+          echo "<input type='hidden' name='hotel' value='".$_POST['ariaLS']."'>";
+        }
+        else if(isset($_POST['bellagio'])){
+          echo "Bellagio - Las Vegas";
+          echo "<input type='hidden' name='hotel' value='".$_POST['bellagioLs']."'>";
+        }
+        else if(isset($_POST['caesars'])){
+          echo "Caesars Palace - Las Vegas";
+          echo "<input type='hidden' name='hotel' value='".$_POST['caesarsLS']."'>";
+        }
+        else if(isset($_POST['cosmo'])){
+          echo "Cosmopolitan - Las Vegas";
+          echo "<input type='hidden' name='hotel' value='".$_POST['cosmoLS']."'>";
+        }
       ?>
   </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check In Date: <span><?php echo  isset($_POST['checkInDate']) ? $_POST['checkInDate'] : null; ?></span>
