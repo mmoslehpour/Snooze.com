@@ -53,25 +53,18 @@
 
   <section class="reserve-area">
     <div class="section-top">
-      <span class="heading-top">Contact Us</span>
+      <span class="heading-top">Your Reservation</span>
     </div>
-    <h4>Please enter your requst below, we will get back to you shortly. </h4>
-     <form action="contact.php" method="post" name="form" class="form-box">
+    <h4>Please enter your name and confirmation number below</h4>
+     <form action="cancel2.php" method="POST" name="form" class="form-box">
       <div class="form-group">
         <label for="name">Name</label>
         <br />
         <input type="text" name="name" class="form-control" placeholder="Enter your first and last name" pattern="[A-Z\sa-z]{3,20}" required />
         <br />
-        <label for="email">Email</label>
+        <label for="confirmationNumber">Confirmation Number</label>
         <br />
-        <input type="email" name="email" class="form-control" placeholder="Enter your email address" required />
-        <br />
-        <label for="phone">(Optional) Confirmation #</label>
-        <br />
-        <input name="conNum" class="form-control" placeholder="Enter your 8 digit confirmation number" pattern="(\d{8})" />
-        <br />
-        <label for="message">Message</label><br>
-        <textarea name="msg" class="form-control" placeholder="Enter Your Message Here..." required></textarea><br>
+        <input type="text" name="confirmationNumber" class="form-control" placeholder="Enter your confirmation number" required />
 
         </div>
         <div class="form-group row">

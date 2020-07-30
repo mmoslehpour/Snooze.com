@@ -25,38 +25,64 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <!-- All items in here will be in the collapse button -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="booking.php">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="booking.html">Reservations</a>
+            <a class="nav-link" href="reservation.php">Reservations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
+          </li>
+          <li>
+            <a class='nav-link' href="cancel.php">Cancellation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Log in</a>
+            <a class="nav-link" href="login2.0.html">Log in</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- End of Navbar -->
+
 
 
   <section class="reserve-area">
     <div class="section-top">
       <span class="heading-top">Book your trip.</span>
     </div>
-    <h3>Hotel: <span>XXXX</span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check In Date: <span>XXXX</span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check Out Date: <span>XXXX</span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Room(s): <span>XXXX</span>
+     <form action="booking-confirmed.php" method="post" name="form" class="form-box">
+    <h3>Hotel: <span>
+      <?php
+           if(isset($_POST['hardRock'])){
+          echo "Hard Rock - Holly Wood";
+          echo "<input type='hidden' name='hotel' value='".$_POST['hardRockHollyWood']."'>";
+        }
+        else if(isset($_POST['solare'])){
+          echo "Solare - Palm Springs";
+          echo "<input type='hidden' name='hotel' value='".$_POST['solarePS']."'>";
+        }
+        else if(isset($_POST['monarch'])){
+          echo "Monarch - San Francisco";
+            echo "<input type='hidden' name='hotel' value='".$_POST['monarchHotel']."'>";
+        }
+        else if(isset($_POST['w'])){
+          echo "W - Holly Wood";
+          echo "<input type='hidden' name='hotel' value='".$_POST['wHotel']."'>";
+        }
+      ?>
+  </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check In Date: <span><?php echo  isset($_POST['checkInDate']) ? $_POST['checkInDate'] : null; ?></span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check Out Date: <span><?php echo isset($_POST['checkOutDate']) ? $_POST['checkOutDate'] : null; ?></span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Room(s): <span><?php echo isset($_POST['rooms']) ? $_POST['rooms'] : null; ?></span>
     </h3>
     <h4>Please fill out the following information to complete your booking reservation.</h4>
-     <form action="booking-confirmed.php" method="post" name="form" class="form-box">
+
       <div class="form-group">
         <label for="name">Name</label>
         <br />
@@ -68,7 +94,7 @@
         <br />
         <label for="phone">Phone</label>
         <br />
-        <input type="tel" name="phone" class="form-control" placeholder="(123)456-7890" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required />
+        <input type="tel" name="phone" class="form-control" placeholder="(123)456-7890"  required />
         <br />
         <label for="dob">Date of Birth</label>
         <input type="date" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Enter DOB: 01/01/1990" required>
@@ -81,11 +107,17 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
+
+            <input type="hidden" name="checkin" value="<?php echo $_POST['checkInDate']; ?>">
+            <input type="hidden" name="checkout" value="<?php echo $_POST['checkOutDate']; ?>">
+            <input type="hidden" name="roomNumber" value="<?php echo $_POST['rooms']; ?>">
             <input type="submit" name="submit" value="BOOK NOW" class="sub-btn"/>
 
           </div>
         </div>
       </div>
+
+
     </form>
     <a href="booking.html"><h6 class="low">Modify your search</h6></a>
   </section>

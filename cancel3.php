@@ -48,40 +48,42 @@
     </nav>
     <!-- End of Navbar -->
 
+<?php
+
+$con = mysqli_connect('localhost','root','','db_hotel_reservations');
+$confNumber = $_POST['confirmation'];
+
+if(mysqli_connect_error()){
+  die('Connect Error ('. mysqli_connect_errno(). ')'
+  . mysqli_connect_error());
+}
+else{
+  //Grabs the reservation by confirmation number
+  $query = "DELETE FROM tbl_reservations WHERE fldConfirmation= '$confNumber'";
+  $result = mysqli_query($con,$query);
+  if($result){
+    echo "Records were deleted successfully";
+  }
+}
+
+
+
+
+
+ ?>
 
 
 
   <section class="reserve-area">
     <div class="section-top">
-      <span class="heading-top">Contact Us</span>
+      <span class="heading-top">Your Reservation has been canceled</span>
     </div>
-    <h4>Please enter your requst below, we will get back to you shortly. </h4>
-     <form action="contact.php" method="post" name="form" class="form-box">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <br />
-        <input type="text" name="name" class="form-control" placeholder="Enter your first and last name" pattern="[A-Z\sa-z]{3,20}" required />
-        <br />
-        <label for="email">Email</label>
-        <br />
-        <input type="email" name="email" class="form-control" placeholder="Enter your email address" required />
-        <br />
-        <label for="phone">(Optional) Confirmation #</label>
-        <br />
-        <input name="conNum" class="form-control" placeholder="Enter your 8 digit confirmation number" pattern="(\d{8})" />
-        <br />
-        <label for="message">Message</label><br>
-        <textarea name="msg" class="form-control" placeholder="Enter Your Message Here..." required></textarea><br>
+    <h4>Thank You!</h4>
+<div class="container" style="text-align:center;">
+    <a href="homePage.html">Return Home</a>
+</div>
 
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <input type="submit" name="submit" value="SEND" class="sub-btn"/>
 
-          </div>
-        </div>
-      </div>
-    </form>
   </section>
 
 
