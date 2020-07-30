@@ -17,35 +17,39 @@
 </head>
 
 <body>
-  <!-- This is the Navbar which will be on every page -->
 
-  <nav class="navbar navbar-expand-lg  navbar-dark navbar-inverse fixed-top">
-    <div class="container-fluid">
+    <!-- This is the Navbar which will be on every page -->
 
-      <a class="navbar-brand" href="homePage.html">SNOOZE.com</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- All items in here will be in the collapse button -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="booking.html">Reservations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Log in</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg  navbar-dark navbar-inverse fixed-top">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="homePage.html">SNOOZE.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- All items in here will be in the collapse button -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="booking.php">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cancel.php">Reservation Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login2.0.html">Log in</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- End of Navbar -->
+    </nav>
+    <!-- End of Navbar -->
+
+
   <!-- <header>
     <div class="topnav">
       <b>SNOOZE.com</b>
@@ -57,31 +61,31 @@
   </header> -->
   <section class="booking-area">
     <div class="container">
-      <form action="" class="form">
+      <form action="reservation.php" method="POST" class="form">
         <div class="input-group">
-          <label for="destination" class="input-label">Location</label>
-          <input type="text" class="input-b" id="destination"></input>
+          <label for="destination" class="input-label">State</label>
+          <input type="text" class="input-b" id="destination" value="<?php echo $_POST['state']; ?>"></input>
         </div>
         <div class="input-group">
           <label for="checkin" class="input-label">Check In</label>
-          <input type="date" class="input" id="checkin"></input>
+          <input type="date" class="input" name="checkInDate" id="checkin" required></input>
         </div>
         <div class="input-group">
           <label for="checkout" class="input-label">Check Out</label>
-          <input type="date" class="input" id="checkout"></input>
+          <input type="date" class="input" name="checkOutDate" id="checkout" required></input>
         </div>
         <div class="input-group-b">
           <label for="rooms" class="input-label-b">Room(s)</label>
-          <select type="text" class="options" id="rooms">
+          <select type="text" class="options" name="rooms" id="rooms">
             <option value="1">1</option>
-            <option value="1">2</option>
-            <option value="1">3</option>
-            <option value="1">4</option>
-            <option value="1">5</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
         </div>
-        <button class="btn btn-hov">Search</button>
-      </form>
+
+
     </div>
   </section>
 
@@ -102,7 +106,11 @@
           <li>WiFi</li>
           <li>All Inclusive</li>
           <li>Free Cancellation
-          <a href="reservation.html" class="btn rooms-btn" style="float: right; margin-right: 25px;">Book Now &rarr;</a></li>
+
+                <input type="hidden" name="hardRockHollyWood" value="Hard Rock - Holly Wood">
+              <input class="btn rooms-btn" type="submit" name="hardRock" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+          </li>
         </div>
       </div>
       <div class="grid-item featured-rooms">
@@ -116,7 +124,11 @@
           <li>WiFi</li>
           <li>All Inclusive</li>
           <li>Cancel within 24 hours before checking in
-          <a href="reservation.html" class="btn rooms-btn" style="float: right; margin-right: 25px;">Book Now &rarr;</a></li>
+
+                <input type="hidden" name="solarePS" value="Solare - Palm Springs">
+                <input class="btn rooms-btn" type="submit" name="solare" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+          </li>
         </div>
       </div>
       <div class="grid-item featured-rooms">
@@ -127,10 +139,14 @@
         <div class="room-info-wrap">
           <span class="room-price">$320 <span class="per-night">/ night</span></span>
           <p class="paragraph">San Francisco is the place to be. Monarch is located in the heart of San Franciso and offers a great 360 view of the city and the harbor.</p>
-          <li>WiFi</li>
-          <li>All Inclusive</li>
-          <li>Free Cancellation
-          <a href="reservation.html" class="btn rooms-btn" style="float: right; margin-right: 25px;">Book Now &rarr;</a></li>
+        <li>WiFi</li>
+        <li>All Inclusive</li>
+        <li>Free Cancellation
+
+                <input type="hidden" name="monarchHotel" value="Monarch - San Francisco">
+                <input class="btn rooms-btn" type="submit" name="monarch" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+        </li>
         </div>
       </div>
       <div class="grid-item featured-rooms">
@@ -144,7 +160,12 @@
           <li>WiFi</li>
           <li>All Inclusive</li>
           <li>Free Cancellation
-          <a href="reservation.html" class="btn rooms-btn" style="float: right; margin-right: 25px;">Book Now &rarr;</a></li>
+
+              <input type="hidden" name="wHotel" value="W - Holly Wood">
+              <input class="btn rooms-btn" type="submit" name="w" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
+
+          </li>
+        </form>
         </div>
       </div>
     </div>
