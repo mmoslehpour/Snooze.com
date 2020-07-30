@@ -109,7 +109,7 @@
           <li>All Inclusive</li>
           <li>Free Cancellation
 
-                <input type="hidden" name="hardRockHollyWood" value="Hard Rock - Holly Wood">
+              <input type="hidden" name="hardRockHollyWood" value="Hard Rock - Holly Wood">
               <input class="btn rooms-btn" type="submit" name="hardRock" value="Book Now &rarr;" style="float: right; margin-right: 50px;">
 
           </li>

@@ -90,7 +90,7 @@ else{
             echo '<h2>Check In: '.$row['fldCheckin'].'</h2>';
             echo '<h2>Check Out: '.$row['fldCheckout'].'</h2><br/>';
             echo '<h2>Rooms: '.$row['fldRooms'].'</h2>';
-            echo $confNumber;
+            echo '<br/> <h2>Would you like to cancel this reservation?</h2>';
             }
              ?>
           </p>
@@ -100,7 +100,7 @@ else{
 
         <div class="form-group row">
           <div class="col-sm-10">
-            <input type="submit" name="submit" value="submit" class="sub-btn"/>
+            <input type="submit" name="submit" value="Cancel Reservation" class="sub-btn"/>
 
           </div>
         </div>
