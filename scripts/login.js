@@ -11,7 +11,7 @@ function verify(){
   //Assuming that the login is correct, we forward them to the admin page
   if (username == "Admin" && password == "Pass123"){
     alert ("Login Attempt is successful");
-    window.location = "AdminControl.html";
+
   }
 
   //This is FAILED ATTEMPT CASES:
