@@ -16,37 +16,37 @@
 </head>
 
 <body>
+  <!-- This is the Navbar which will be on every page -->
 
-    <!-- This is the Navbar which will be on every page -->
+  <nav class="navbar navbar-expand-lg  navbar-dark navbar-inverse fixed-top">
+    <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg  navbar-dark navbar-inverse fixed-top">
-      <div class="container-fluid">
+      <a class="navbar-brand" href="homePage.html">SNOOZE.com</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <a class="navbar-brand" href="homePage.html">SNOOZE.com</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- All items in here will be in the collapse button -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="booking.php">Search</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cancel.php">Reservation Info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login2.0.html">Log in</a>
-            </li>
-          </ul>
-        </div>
+      <!-- All items in here will be in the collapse button -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="booking.php">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cancel.php">Reservation Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Log in</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <!-- End of Navbar -->
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+
 
 
 
@@ -70,34 +70,38 @@
         $subject='Snooze Hotel Booking Confirmation';
         $message="Thank you for booking with Snooze.com, here is your reservation details: "."\n\n"."Name: ".$name."\n"."Phone: ".$phone."\n"."Comfirmation Number: ".$comfirmationNum."\n"."Hotel: ". $hotelName. "\n"."Check-in Date: ". $checkin. "\n"."Check-out Date: ". $checkout. "\n"."Number of Room(s): ". $rooms."\n\n\n"."Contact us by our contact page if you have any questions, thank you." . "\n" . "Sincerely, Snooze Team";
         $header="From: ".$sender;
-/*
-        echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
-        echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
-        echo "<h4>Name: "." ".$name."<br><br></h4>";
-        echo "<h4>Email: "." ".$receiver."<br><br></h4>";
-        echo "<h4>Phone: "." ".$phone."<br><br></h4>";
-        echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
-        */
-         if(mail($receiver, $subject, $message, $header)){
-           //header("Location: booking-confirmed.php");
-           echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
-           echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
-           echo "<h4>Name: "." ".$name."<br><br></h4>";
-           echo "<h4>Email: "." ".$receiver."<br><br></h4>";
-           echo "<h4>Phone: "." ".$phone."<br><br></h4>";
-           echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
-           echo "<h4>Hotel: "." ".$hotelName."<br><br></h4>";
-           echo "<h4>Check-in Date #: "." ".$checkin."<br><br></h4>";
-           echo "<h4>Check-out Date #: "." ".$checkout."<br><br></h4>";
-           echo "<h4>Room #: "." ".$rooms."<br><br></h4>";
 
+echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
+echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
+echo "<h4>Name: "." ".$name."<br><br></h4>";
+echo "<h4>Email: "." ".$receiver."<br><br></h4>";
+echo "<h4>Phone: "." ".$phone."<br><br></h4>";
+echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
+echo "<h4>Hotel: "." ".$hotelName."<br><br></h4>";
+echo "<h4>Check-in Date #: "." ".$checkin."<br><br></h4>";
+echo "<h4>Check-out Date #: "." ".$checkout."<br><br></h4>";
+echo "<h4>Room #: "." ".$rooms."<br><br></h4>";
 
-
-
-         }
-         else{
-           echo "Something went wrong... please try again. ";
-         }
+         // if(mail($receiver, $subject, $message, $header)){
+         //   //header("Location: booking-confirmed.php");
+         //   echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
+         //   echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
+         //   echo "<h4>Name: "." ".$name."<br><br></h4>";
+         //   echo "<h4>Email: "." ".$receiver."<br><br></h4>";
+         //   echo "<h4>Phone: "." ".$phone."<br><br></h4>";
+         //   echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
+         //   echo "<h4>Hotel: "." ".$hotelName."<br><br></h4>";
+         //   echo "<h4>Check-in Date #: "." ".$checkin."<br><br></h4>";
+         //   echo "<h4>Check-out Date #: "." ".$checkout."<br><br></h4>";
+         //   echo "<h4>Room #: "." ".$rooms."<br><br></h4>";
+         //
+         //
+         //
+         //
+         // }
+         // else{
+         //   echo "Something went wrong... please try again. ";
+         // }
       }
        ?>
     </body>

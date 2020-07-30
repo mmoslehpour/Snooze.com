@@ -33,22 +33,20 @@
             <a class="nav-link" href="booking.php">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reservation.php">Reservations</a>
+            <a class="nav-link" href="cancel.php">Reservation Info</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-          <li>
-            <a class='nav-link' href="cancel.php">Cancellation</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login2.0.html">Log in</a>
+            <a class="nav-link" href="login.html">Log in</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- End of Navbar -->
+
 
 
 
