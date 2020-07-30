@@ -57,34 +57,47 @@
     <body>
       <?php
       if(isset($_POST['submit'])){
+        $hotelName = $_POST['hotel'];
+        $checkin = $_POST['checkin'];
+        $checkout = $_POST['checkout'];
+        $rooms = $_POST['roomNumber'];
         $name = $_POST['name'];
         $sender = 'moslehpourmina@gmail.com'; // replace with another sender email
         $phone = $_POST['phone'];
         $numGenerator = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         $comfirmationNum = substr(str_shuffle($numGenerator), 0, 8);
         $receiver=$_POST['email']; // Receiver Email
-        $subject='Snooze Hotel Booking Comfirmation';
-        $message="Thank you for booking with Snooze.com, here is your reservation details: "."\n"."Name: ".$name."\n"."Phone: ".$phone."\n"."Comfirmation Number: ".$comfirmationNum;
+        $subject='Snooze Hotel Booking Confirmation';
+        $message="Thank you for booking with Snooze.com, here is your reservation details: "."\n\n"."Name: ".$name."\n"."Phone: ".$phone."\n"."Comfirmation Number: ".$comfirmationNum."\n"."Hotel: ". $hotelName. "\n"."Check-in Date: ". $checkin. "\n"."Check-out Date: ". $checkout. "\n"."Number of Room(s): ". $rooms."\n\n\n"."Contact us by our contact page if you have any questions, thank you." . "\n" . "Sincerely, Snooze Team";
         $header="From: ".$sender;
-
+/*
         echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
         echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
         echo "<h4>Name: "." ".$name."<br><br></h4>";
         echo "<h4>Email: "." ".$receiver."<br><br></h4>";
         echo "<h4>Phone: "." ".$phone."<br><br></h4>";
         echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
-        // if(mail($receiver, $subject, $message, $header)){
-        //   //header("Location: booking-confirmed.php");
-        //   echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
-        //   echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
-        //   echo "<h4>Name: "." ".$name."<br><br></h4>";
-        //   echo "<h4>Email: "." ".$receiver."<br><br></h4>";
-        //   echo "<h4>Phone: "." ".$phone."<br><br></h4>";
-        //   echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
-        // }
-        // else{
-        //   echo "Something went wrong... please try again. ";
-        // }
+        */
+         if(mail($receiver, $subject, $message, $header)){
+           //header("Location: booking-confirmed.php");
+           echo "<h1>Congratulations, your trip has been confirmed!<br></h1>";
+           echo "<h4>Here is your reservation details. An email will be sent to you shortly with your confirmation number. To manage your reservation, see manage reservations.<br><br></h4> ";
+           echo "<h4>Name: "." ".$name."<br><br></h4>";
+           echo "<h4>Email: "." ".$receiver."<br><br></h4>";
+           echo "<h4>Phone: "." ".$phone."<br><br></h4>";
+           echo "<h4>Comfirmation #: "." ".$comfirmationNum."<br><br></h4>";
+           echo "<h4>Hotel: "." ".$hotelName."<br><br></h4>";
+           echo "<h4>Check-in Date #: "." ".$checkin."<br><br></h4>";
+           echo "<h4>Check-out Date #: "." ".$checkout."<br><br></h4>";
+           echo "<h4>Room #: "." ".$rooms."<br><br></h4>";
+
+
+
+
+         }
+         else{
+           echo "Something went wrong... please try again. ";
+         }
       }
        ?>
     </body>
